@@ -1,0 +1,34 @@
+
+
+/*  */
+.table-responsive {
+    max-height: 600px; /* Altura máxima para el contenedor */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    position: relative; /* Necesario para el posicionamiento del thead */
+}
+
+.table {
+    width: 100%; /* Asegura que la tabla ocupe el ancho completo */
+    border-collapse: collapse; /* Evita espacio entre bordes */
+}
+
+.table thead {
+    position: sticky; /* Mantiene el thead fijo */
+    top: 0; /* Posición del thead */
+    background-color: #ffffff; /* Color de fondo para el thead */
+    z-index: 10; /* Asegura que el thead esté por encima de otras celdas */
+    
+}
+
+.table th, .table td {
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es muy largo */
+    max-width: 100px; /* Ancho máximo para las celdas */
+    border: 1px solid #ccc; /* Agrega un borde para visualización */
+    padding: 8px; /* Espaciado interno para las celdas */
+}
+
+.table th {
+    background-color: #f1f1f1; /* Color de fondo para los encabezados */
+    white-space: nowrap; /* Evita el salto de línea en horizontal */
+}

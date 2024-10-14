@@ -1,0 +1,10 @@
+body {
+  background-color: #58a0c0; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to top, #58a0c0, #ffffff);
+  background-attachment: fixed;
+}
+
+.footer {
+  max-width: 450px;
+  margin: auto;
+}
