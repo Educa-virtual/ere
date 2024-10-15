@@ -4,7 +4,7 @@ if (!isset($_SESSION["dni"]))
     header("location:index.php");
 
 require_once 'assets/helper.php';
-$fechaVencimiento = '2024-08-04'; //Poder manipular este dato desde la base de datos y con una interfaz
+$fechaVencimiento = '2024-10-20'; //Poder manipular este dato desde la base de datos y con una interfaz
 ?>
 <!DOCTYPE html>
 <html lang="es">

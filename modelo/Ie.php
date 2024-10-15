@@ -76,4 +76,5 @@ class Ie extends Modelo
             'resultado' => $resultado,
         ];
     }
+   
 }
