@@ -1,0 +1,43 @@
+
+a:hover {
+    filter: invert(85%);
+}
+.barSearch {
+    width: 100vw;
+}
+.shadow {
+    text-shadow:
+        1px 1px 2px rgb(84, 83, 83),
+        0 0 1em rgb(129, 147, 169),
+        0 0 0.2em rgb(173, 173, 175);
+   /*  color: white; */
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    transform: translate(-50%, -50%);
+    content: url('../img/svg/loader.svg');
+
+}
+.cargar {
+    display: none;
+}
+.text-menu {
+    font-size: 14px;
+}
+
+.text-usuario {
+    font-size: 11px;
+}
+.marca {
+    position: fixed;
+    width: 100lvw;
+    height: 100lvh;
+    opacity: 0.2;
+    background-image: url('../img/logos/logoDRE.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    z-index: -1;
+}

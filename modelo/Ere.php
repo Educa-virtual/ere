@@ -1,5 +1,5 @@
 <?php
-require_once './../../core/Modelo.php';
+require_once './core/Modelo.php';
 
 class Ere extends Modelo
 {
@@ -238,5 +238,11 @@ class Ere extends Modelo
         $sql = "SELECT * FROM v_historial_ies WHERE evaluacion=? and detalle_id=? and codmodular=?";
         $parametros = [$evaluacion, $coddetalle, $codmodular];
         return $this->_bd->ejecutar($sql, $parametros)['data'];
+    }
+    public function getContador(){
+         $sql = "SELECT count(id) FROM auditoria;";
+        $parametros = [];
+        return $this->_bd->ejecutar($sql, $parametros);
+        
     }
 }
