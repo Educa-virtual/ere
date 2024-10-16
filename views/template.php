@@ -14,32 +14,28 @@
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+
     
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
-    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
+
     <link rel="stylesheet" href="css/styleprueba.css">
     <link rel="stylesheet" href="css/disenooptimizado.css">
+    <!-- es la parte de las tablas. -->
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
 
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
     <div class="marca" id="marca"></div>
     <div id="loader" class="loader"></div>
-    
-    <main id="content" style="display: none;" class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+
+    <main id="content" style="display: none;"
+        class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <div class="container-fluid py-2 px-2">
             <!-- Navbar -->
             <div id="menu"></div>
@@ -51,27 +47,27 @@
             </div>
 
             <!-- Footer -->
-             <div id="pie"></div>
+            <div id="pie"></div>
 
             <?php /* require_once "template/footer.php"; */ ?>
-             <footer class="footer py-4  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col">
-              <div class="copyright text-center text-sm text-muted">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                
-                <a href="?" class="font-weight-bold">DREMO</a> - 
-                Dirección Regional de Educación - Moquegua. <br>
-                v1.0 Proyecto Educativo Virtual
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </footer>
+            <footer class="footer py-4  ">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col">
+                            <div class="copyright text-center text-sm text-muted">
+                                © <script>
+                                document.write(new Date().getFullYear())
+                                </script>,
+
+                                <a href="?" class="font-weight-bold">DREMO</a> -
+                                Dirección Regional de Educación - Moquegua. <br>
+                                v1.0 Proyecto Educativo Virtual
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
 
             <!-- End Footer -->
 
@@ -94,9 +90,16 @@
         document.write('<script src="./assets/js/jquery.min.js"><\/script>');
     }
     </script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
-    <?php /* require_once "template/js.php"; */ ?>
-    <script src="./assets/js/jscript.js"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    
+    <script src="js/jscript.js"></script>
 </body>
 
 </html>

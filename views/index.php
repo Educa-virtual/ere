@@ -1,7 +1,7 @@
 
 <div id="homePrincipal" style="background-image: url('imagen/fondo.jpg'); background-repeat: repeat-x;">
     <!-- Main Container -->
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
         <!-- Login Container -->
         <div class="row border rounded-5 bg-white shadow box-area">
             <!-- Left Box -->
@@ -77,45 +77,13 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    
+    
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+-->
 
-    <script src="js/jscript.js"></script>
-    <script>
-        $('#btn').click(function() {
-            var dnis = $('#username').val();
-            var claves = $('#password').val();
-            var ruta = "usuario=" + dnis + "&clave=" + claves;
-            // console.log(claves)
-            if (dnis == '') {
-                $('#username').focus();
-                $('#username').css("background-color", "#ffe7e7");
-            } else if (claves == '') {
-                $('#password').focus();
-                $('#password').css("background-color", "#ffe7e7");
-            } else {
-                // console.log(claves)
-                $.ajax({
-                        url: '?ctrl=CtrlUsuario&accion=validar',
-                        type: 'POST',
-                        data:ruta,
-                        
-                        beforeSend: function() {
-                            $('.spinner-border').removeClass("cargar");
-                        }
-                    })
-                    .done(function(res) {
-                       console.log(res)
-                       json = JSON.parse(res);
-                        $('#menu').html(json.menu);
-                        $('#home').html(json.contenido);
-                        $('.spinner-border').addClass("cargar");
-                    })
-            }
-        });
-        
-    </script>
     </div>

@@ -43,7 +43,7 @@ $fechaVencimiento = '2024-10-20';
     <div class="row my-2">
         <div class="col-sm-12 text-center">
             <?php
-                if (estoyATiempo($fechaVencimiento)):
+                if (Helper::estoyATiempo($fechaVencimiento)):
                 ?>
             <button type="button" class="btn btn-primary btn-lg xLinkInfo"
                 data-info="<?= $ie['codmodular'] . '|' . $ie['descripcion'] . '|' . $ie['nivel'] ?>"
@@ -57,7 +57,7 @@ $fechaVencimiento = '2024-10-20';
             <br>
             <div class="alert alert-danger text-center">
                 La opción <b>SUBIR RESULTADOS DE APLICATIVOS</b> solo estará disponible hasta el:
-                <b><?=formatoFecha($fechaVencimiento) ?> </b><br>
+                <b><?=Helper::formatoFecha($fechaVencimiento) ?> </b><br>
                 <span class="text-danger">
                     Coordine con su UGEL, para que pueda validarlos.
                 </span>
@@ -151,7 +151,7 @@ $fechaVencimiento = '2024-10-20';
                             <div class="col-sm-12">
                                 <div class="alert alert-danger text-center">
                                     Esta opción solo estará disponible hasta el:
-                                    <b><?= formatoFecha($fechaVencimiento) ?> </b><br>
+                                    <b><?=Helper::formatoFecha($fechaVencimiento) ?> </b><br>
                                     <span class="text-danger">
                                         Coordine con las IIEE, para que subar sus archivos EXCEL para que pueda
                                         validarlos.

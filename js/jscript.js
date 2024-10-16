@@ -250,15 +250,15 @@ function validarSeleccion(variable,valor) {
     const progressBar = document.querySelector('.progress-bar');
     const progressContainer = document.querySelector('.progress');
     const fileAlert = document.getElementById('file-alert');
-    dropZone.addEventListener('click', () => {
+    /* dropZone.addEventListener('click', () => {
         fileInput.click();
-    });
+    }); */
 
-    fileInput.addEventListener('change', () => {
+    /* fileInput.addEventListener('change', () => {
         showFileName(fileInput.files);
-    });
+    }); */
 
-    dropZone.addEventListener('dragover', (e) => {
+    /* dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
         dropZone.classList.add('dragover');
     });
@@ -273,7 +273,7 @@ function validarSeleccion(variable,valor) {
         dropZone.classList.remove('dragover');
         fileInput.files = e.dataTransfer.files;
         showFileName(e.dataTransfer.files);
-    });
+    }); */
 
     function showFileName(files) {
         if (files.length > 0) {
@@ -375,3 +375,35 @@ function validarSeleccion(variable,valor) {
                     }
                 });
             });
+    
+        $(document).on('click', '#btn', function() {
+            var dnis = $('#username').val();
+            var claves = $('#password').val();
+            var ruta = "usuario=" + dnis + "&clave=" + claves;
+            console.log(claves)
+            if (dnis == '') {
+                $('#username').focus();
+                $('#username').css("background-color", "#ffe7e7");
+            } else if (claves == '') {
+                $('#password').focus();
+                $('#password').css("background-color", "#ffe7e7");
+            } else {
+                // console.log(claves)
+                $.ajax({
+                        url: '?ctrl=CtrlUsuario&accion=validar',
+                        type: 'POST',
+                        data:ruta,
+                        
+                        beforeSend: function() {
+                            $('.spinner-border').removeClass("cargar");
+                        }
+                    })
+                    .done(function(res) {
+                       console.log(res)
+                       json = JSON.parse(res);
+                        $('#menu').html(json.menu);
+                        $('#home').html(json.contenido);
+                        $('.spinner-border').addClass("cargar");
+                    })
+            }
+        });
